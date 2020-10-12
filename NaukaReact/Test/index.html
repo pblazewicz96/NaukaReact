@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Are Unicorns bold?</title>
+
+    <style>
+        body {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid #000;
+        }
+
+        code,
+        pre {
+            background-color: #CCC;
+            padding: 4px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Are Unicorns bold?</h1>
+
+    <h2>Instructions</h2>
+    <p>
+        Write a JavaScript code which will decorate every <code>&lt;strong></code> element inside
+        <code>div.amazing-wrapper</code> elements with a unicorn!
+    </p>
+    <p>
+        Unicorn emoji should be added within each <code>&lt;strong></code> on its end (separated by space from the
+        existing text), for example:
+        <pre>&lt;p>Text &lt;strong>bolded&lt;/strong>&lt;/p></pre>
+        should be transformed to:
+        <pre>&lt;p>Text &lt;strong>bolded 🦄&lt;/strong>&lt;/p></pre>
+    </p>
+
+    <h2>Preview</h2>
+
+    <p>
+        This is a sample expected result based on Case 1 below:
+    </p>
+
+    <div class="amazing-wrapper-expected">
+        <em>Every single</em> <strong>strong 🦄</strong> shall be <strong>decorated 🦄</strong> with a
+        <strong><em>unicorn</em> 🦄</strong>, period!
+    </div>
+
+    <h2>Test cases</h2>
+
+    <p>
+        All changes should be done within this single file. Your code should modify below HTML.
+    </p>
+
+    <h3>Case 1</h3>
+
+    <div class="amazing-wrapper">
+        <em>Every single</em> <strong id="myStrongUnicorn">strong</strong> shall be <strong
+            id="myStrongUnicorn">decorated</strong> with a
+        <strong id="myStrongUnicorn"><em>unicorn</em></strong>, period!
+    </div>
+
+    <h3>Case 2</h3>
+
+    <div class="amazing-wrapper">
+        <p>We can also have <strong>some fun</strong> with lists:</p>
+        <ul>
+            <li>With <span>some random <strong>bolded text</strong>!</span></li>
+            <li>And other <strong>fancy animals</strong> like <strong>🐴 🦓</strong>!</li>
+        </ul>
+    </div>
+
+    <h3>Case X</h3>
+
+    <p><em>If you would like to add some test cases which cover any edge cases or any markup which is not covered above,
+            feel free to do so :)</em></p>
+
+    <script>
+        (function (doc) {
+            // .innerHTML = "🦄";
+            var uniStrong = document.getElementsByClassName(".amazing-wrapper");
+            // var newNode = uniStrong.getElementsByTagName("strong")[0];
+            console.log(uniStrong);
+
+            // let UnicornDiv = doc.querySelector(".amazing-wrapper");
+
+            // let strongSign = "</strong>";
+            // uniStrong.insertBefore(" 🦄", newNode);
+        })(document);
+    </script>
+</body>
+
+</html>
